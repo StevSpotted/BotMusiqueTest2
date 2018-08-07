@@ -166,7 +166,9 @@ function ban(msg){
 	    };
 	    memberToBan.ban(banOptions);
 	    msg.channel.send(` L\'utilisateur ${memberToBan} à bien été bani`)
-	}
+	}else{
+        msg.channel.send(`L\'utilisateur ${memberToKick} ne peut être ban`)
+    }
 }
 
 function kick(msg){
