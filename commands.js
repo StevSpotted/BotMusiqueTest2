@@ -152,7 +152,7 @@ function help(msg){
 
 function ban(msg){
 	if ( !msg.member.hasPermission('BAN_MEMBERS')){
-		return msg.channel.send(`Vous n'avez pas la permission de ban`)
+		return msg.channel.send(`Vous n'avez pas la permission de ban`);
 	}
 	let memberToBan = msg.mentions.members.first();
 	if(memberToBan && memberToBan.bannable && (msg.member.highestRole.calculatedPosition >
@@ -171,7 +171,7 @@ function ban(msg){
 
 function kick(msg){
 	if ( !msg.member.hasPermission('KICK_MEMBERS')){
-		return msg.channel.send(`Vous n'avez pas la permission de kick`)
+		return msg.channel.send(`Vous n'avez pas la permission de kick`);
 	}
 	let memberToKick = msg.mentions.members.first();
 	if(memberToKick && memberToKick.kickable && (msg.member.highestRole.calculatedPosition >
