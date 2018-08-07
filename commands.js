@@ -173,11 +173,12 @@ function kick(msg){
 	if ( !msg.member.hasPermission('KICK_MEMBERS')){
 		return msg.channel.send(`Vous n'avez pas la permission de kick`);
 	}
+    
+	let memberToKick = msg.mentions.members.first();
     if(memberToKick && memberToKick.kickable && (msg.member.highestRole.calculatedPosition <=
             memberToKick.highestRole.calculatedPosition || msg.guild.ownerID == msg.author.id)){
             return msg.channel.send(`Vous n'avez pas la permission de kick`);
     }
-	let memberToKick = msg.mentions.members.first();
 	if(memberToKick && memberToKick.kickable && (msg.member.highestRole.calculatedPosition >
             memberToKick.highestRole.calculatedPosition || msg.guild.ownerID == msg.author.id)){
 		let reason = tool.parseOptionArg('raison', msg.content);
