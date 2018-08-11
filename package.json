@@ -6,8 +6,7 @@
   "dependencies": {
     "colors": "^1.3.1",
     "discord.js": "^11.3.2",
-    "ffmpeg": "file:ffmpeg",
-    "ffmpeg-binaries": "^4.0.0",
+    "ffmpeg": "^4.0.0",
     "node-gyp": "^3.7.0",
     "opusscript": "0.0.6",
     "os": "^0.1.1",
